@@ -1,0 +1,92 @@
+    @keyframes scale {
+        from {
+            scale: .5;
+        }
+    }
+
+    .img-box img {
+        animation: scale linear both;
+        animation-timeline: view();
+        animation-range: 200px 450px;
+    }
+
+    .bird-img:hover {
+        box-shadow: 2px 3px 5px blue;
+        text-shadow: 3px 4px 5px black;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .img-section {
+        min-block-size: 100%;
+        font-family: system-ui, sans-serif;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        height: 200vh;
+    }
+
+    img {
+        max-inline-size: 100%;
+    }
+
+    .grid {
+        display: grid;
+        gap: 20px;
+        padding: 5px;
+        place-items: center;
+
+    }
+
+    .img-box {
+        display: grid;
+        place-items: center;
+        max-width: 500px;
+        width: 100%;
+        gap: 20px;
+        padding: 12px;
+        border-radius: 10px;
+        background: gray;
+        overflow: clip;
+        overflow-clip-margin: content-box;
+
+    }
+
+    .picture {
+        padding: 20px;
+        max-width: 470px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: Canvas;
+    }
+
+    img {
+        max-block-size: 250px;
+    }
+
+
+    @media (min-width:1020px) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* =========================== */
+    @keyframes spin {
+        to {
+            transform: rotateY(2turn);
+        }
+    }
+
+    .img {
+        animation: spin linear both;
+        animation-timeline: scroll();
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+    }
